@@ -10,5 +10,13 @@ class User extends CI_Controller {
         $this->load->view('template/header',$data);
         $this->load->view('v_home');
         $this->load->view('template/footer');
-	}
+        }
+        
+        public function berita(){
+                $data['judul'] = 'Berita';
+
+                $this->load->view('template/header',$data);
+                $this->load->view('v_berita');
+                $this->load->view('template/footer');
+        }
 }

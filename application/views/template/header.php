@@ -77,7 +77,7 @@
                   <li><a href="#">Bidikmisi</a></li>
                   <li><a href="#">KIP Kuliah</a></li>
                 </ul>
-              </li>
+            </li>
 
             <li><a href="about.html">Damfak</a></li>
             </ul>
@@ -85,10 +85,20 @@
 
           <li class="drop-down"><a href="#">Bidang</a>
             <ul>
-              <li><a href="about.html">Pendidikan</a></li>
+
+              <li class="drop-down"><a href="#">Pendidikan</a>
+                  <ul>
+                    <li><a href="#">TK Islam Alam Nusantara</a></li>
+                    <li><a href="#">SMK Auliya Teladan Mandiri</a></li>
+                    <li><a href="#">Institut Teknologi Pendidikan Auliya</a></li>
+                    <li><a href="#">Daycare Alam Nusantara</a></li>
+                    <li><a href="#">Auliya Boarding School of Business (ABSB)</a></li>
+                  </ul>
+              </li>
+
               <li><a href="team.html">Koperasi</a></li>
               <li><a href="team.html">Kesehatan</a></li>
-              <li><a href="team.html">Peternakan</a></li>
+              <li><a href="team.html">Peternakan </a></li>
             </ul>
           </li>
 
@@ -108,7 +118,7 @@
               </li>
             </ul>
           </li> -->
-          <li><a href="services.html">Berita</a></li>
+          <li><a href="<?php echo base_url();?>user/berita">Berita</a></li>
           <li><a href="services.html">Tentang</a></li>
 
         </ul>
