@@ -67,28 +67,28 @@
             <div class="icon-box">
               <i class="icofont-university"></i>
               <h3><a href="">Pendidikan</a></h3>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <p class="text-justify">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
             </div>
           </div>
           <div class="col-lg-3 mt-4 mt-lg-0">
             <div class="icon-box">
               <i class="icofont-money"></i>
               <h3><a href="">Koperasi</a></h3>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <p class="text-justify">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
             </div>
           </div>
           <div class="col-lg-3 mt-4 mt-lg-0">
             <div class="icon-box">
               <i class="icofont-hospital"></i>
               <h3><a href="">Kesehatan</a></h3>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <p class="text-justify">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
             </div>
           </div>
           <div class="col-lg-3 mt-4 mt-lg-0">
             <div class="icon-box">
               <i class="icofont-cow"></i>
               <h3><a href="">Peternakan</a></h3>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <p class="text-justify">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
             </div>
           </div>
         </div>

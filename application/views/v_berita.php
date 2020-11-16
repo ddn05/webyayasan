@@ -5,7 +5,7 @@
     <div class="container mb-3 text-right navbar">
         <h1 class="navbar-brand">Berita</h1>
         <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Cari Berita" aria-label="Search">
+            <input class="form-control mr-sm-2" type="search" placeholder="Cari Berita " aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cari</button>
         </form>
     </div>
@@ -130,6 +130,25 @@
                     </div>
                 </div>
             </div>
+    </div>
+    <div class="container">
+        <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                    </li>
+                </ul>
+            </nav>
     </div>
 
     </section>

@@ -19,4 +19,12 @@ class User extends CI_Controller {
                 $this->load->view('v_berita');
                 $this->load->view('template/footer');
         }
+
+        public function baca(){
+                $data['judul'] = 'Baca Berita';
+
+                $this->load->view('template/header',$data);
+                $this->load->view('v_baca');
+                $this->load->view('template/footer');
+        }
 }

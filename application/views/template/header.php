@@ -58,7 +58,7 @@
     <div class="container d-flex">
 
       <div class="logo mr-auto">
-          <img src="<?php echo base_url();?>assets/img/yayasan.png" alt="">
+          <a href="<?php echo base_url();?>user"><img src="<?php echo base_url();?>assets/img/yayasan.png" alt=""></a>
         <!-- <h1 class="text-light"><a href="index.html"><span>AULIYA MURSYIDY</span></a></h1> -->
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
@@ -66,7 +66,7 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">Beranda</a></li>
+          <li class="active"><a href="<?php echo base_url();?>user">Beranda</a></li>
 
           <li class="drop-down"><a href="#">Program</a>
             <ul>
@@ -96,9 +96,9 @@
                   </ul>
               </li>
 
-              <li><a href="team.html">Koperasi</a></li>
-              <li><a href="team.html">Kesehatan</a></li>
-              <li><a href="team.html">Peternakan </a></li>
+              <li><a href="#">Koperasi</a></li>
+              <li><a href="#">Kesehatan</a></li>
+              <li><a href="#">Peternakan </a></li>
             </ul>
           </li>
 

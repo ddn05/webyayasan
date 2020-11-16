@@ -98,6 +98,11 @@
   <!-- Template Main JS File -->
   <script src="<?php echo base_url();?>assets/js/main.js"></script>
 
+  <script>
+    
+    CKEDITOR.replace( 'redaksi' );
+
+  </script>
 </body>
 
 </html>
