@@ -16,6 +16,23 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`webyayasan` /*!40100 DEFAULT CHARACTER 
 
 USE `webyayasan`;
 
+/*Table structure for table `tb_admin` */
+
+DROP TABLE IF EXISTS `tb_admin`;
+
+CREATE TABLE `tb_admin` (
+  `id` int(5) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(20) NOT NULL,
+  `username` varchar(11) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+
+/*Data for the table `tb_admin` */
+
+insert  into `tb_admin`(`id`,`nama`,`username`,`password`) values 
+(2,'Dadan Design','dadan','0192023a7bbd73250516f069df18b500');
+
 /*Table structure for table `tb_berita` */
 
 DROP TABLE IF EXISTS `tb_berita`;
@@ -44,9 +61,13 @@ CREATE TABLE `tb_jumbotron` (
   `deskripsi` varchar(250) DEFAULT NULL,
   `gambar` text DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `tb_jumbotron` */
+
+insert  into `tb_jumbotron`(`id`,`judul`,`deskripsi`,`gambar`) values 
+(1,'Pengumuman Pemilihan Dosen ITPA tahap 1','selamat kepada pemenang lomba yeyeyeye','winter_snow_landscape_minimalist_8k_13278-2560x1440.jpg'),
+(2,'Selamat Datang','yaya ayayaya ayaya aya aya aya','DSC07610.JPG');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

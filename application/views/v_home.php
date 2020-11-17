@@ -7,39 +7,29 @@
 
         <div class="carousel-inner" role="listbox">
 
-          <!-- Slide 1 -->
-          <div class="carousel-item active" style="background: url(assets/img/slide/slide-1.jpg)">
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown">Selamat datang di <span>Yayasan Auliya Mursyidy</span></h2>
-                <p class="animate__animated animate__fadeInUp">Yayasan Auliya Mursyidy merupakan yayasan yang bergerak dibidang pendidikan, koperasi, kesehatan dan peternakan</p>
-                <a href="" class="btn-get-started animate__animated animate__fadeInUp">Baca Selengkapnya</a>
-              </div>
-            </div>
-          </div>
-
           <!-- Slide 2 -->
-          <div class="carousel-item" style="background: url(assets/img/slide/slide-2.jpg)">
+          <div div class="carousel-item active" style="background: url(assets/img/slide/slide-2.jpg)">
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animate__animated fanimate__adeInDown">Program <span>Beasiswa S1</span></h2>
-                <p class="animate__animated animate__fadeInUp">Memfasilitasi bagi lulusan SLTA yang ingin melanjutkan ke jenjang perkuliahan</p>
+                <h2 class="animate__animated fanimate__adeInDown">Selamat datang di website <span>YAM</span></h2>
+                <p class="animate__animated animate__fadeInUp">Yayasan Auliya Mursyidy menjadi yayasan yang yang berkomitmen untuk memajukan pendidikan, kesehatan, social dan lingkungan hidup</p>
                 <a href="" class="btn-get-started animate__animated animate__fadeInUp">Baca Selengkapnya</a>
               </div>
             </div>
           </div>
 
-          <!-- Slide 3 -->
-          <div class="carousel-item" style="background: url(assets/img/slide/slide-3.jpg)">
+          <?php foreach($jumbotron as $jum) { ?>
+          <!-- Slide 1 -->
+          <div class="carousel-item" style="background: url(<?php echo base_url('uploads/img-jumbotron/'.$jum->gambar);?>)">
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown">Program <span>Asrama</span></h2>
-                <p class="animate__animated animate__fadeInUp">untuk mencetak generasi mahasiswa yang dapat menjadi pemimpin masa depan, Yayasan Auliya Mursyidy menfasilitasi asrama dengan nama Auliya Boarding School of Business (ABSB)</p>
+                <h2 class="animate__animated animate__fadeInDown"><?php echo $jum->judul?><span></span></h2>
+                <p class="animate__animated animate__fadeInUp"><?php echo $jum->deskripsi ?></p>
                 <a href="" class="btn-get-started animate__animated animate__fadeInUp">Baca Selengkapnya</a>
               </div>
             </div>
           </div>
-
+          <?php } ?>
         </div>
 
         <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
@@ -86,8 +76,8 @@
           </div>
           <div class="col-lg-3 mt-4 mt-lg-0">
             <div class="icon-box">
-              <i class="icofont-cow"></i>
-              <h3><a href="">Peternakan</a></h3>
+              <i class="icofont-group"></i>
+              <h3><a href="">Sosial</a></h3>
               <p class="text-justify">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
             </div>
           </div>
