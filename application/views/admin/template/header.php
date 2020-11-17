@@ -22,6 +22,9 @@
     <link rel="stylesheet" href="<?php echo base_url();?>assets/admin/mystyle.css">
 
     <script src="<?php echo base_url();?>assets/ckeditor/ckeditor.js"></script>
+
+    <!-- Custom styles for this page -->
+    <link href="<?php echo base_url();?>assets/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
     </head>
 
     <body id="page-top">

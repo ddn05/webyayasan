@@ -87,4 +87,68 @@ class Admin extends CI_Controller {
         $this->load->view('admin/v_beritadetail',$data);
         $this->load->view('admin/template/footer');
     }
+
+    public function hapusberita($id){
+        $where = array(
+            'id' => $id
+        );
+
+        $this->m_master->delete_data($where,'tb_berita');
+        redirect('admin/berita?pesan=hapusberita');
+    }
+
+    public function editberita($id){
+        $data['judul']  = 'Rincian Berita';
+        $where = array(
+            'id' => $id
+        );
+        $data['update'] = $this->m_master->edit_data($where,'tb_berita')->result();
+
+        $this->load->view('admin/template/header',$data);
+        $this->load->view('admin/v_editberita',$data);
+        $this->load->view('admin/template/footer');
+    }
+
+    public function updateberita(){
+        $onfig = array();
+        $config['upload_path']      = './uploads/img';
+        $config['allowed_types']    = 'jpg|jpeg|png|gif';
+
+        $this->load->library('upload',$config,'coverupload');
+        $this->coverupload->initialize($config);
+        $coverupload    = $this->coverupload->do_upload('cover');
+        $datcov         = $this->coverupload->data();
+
+        $id             = $this->input->post('id');
+        $tgl            = $this->input->post('tgl');
+        $judul          = $this->input->post('judul');
+        $redaksi        = $this->input->post('redaksi');
+        $temp_redaksi   = $redaksi;
+        $cover          = $datcov['file_name'];
+        if($cover == ''){
+            $data = array(
+                'tgl'           => $tgl,
+                'judul'         => $judul,
+                'redaksi'       => $redaksi,
+                'temp_redaksi'  => $temp_redaksi
+            );
+        }
+        else{
+            $data = array(
+                'tgl'           => $tgl,
+                'judul'         => $judul,
+                'redaksi'       => $redaksi,
+                'temp_redaksi'  => $temp_redaksi,
+                'cover'         => $cover
+            );
+        }
+        
+
+        $where = array(
+            'id'    => $id
+        );
+
+        $this->m_master->update_data($where,$data,'tb_berita');
+        redirect('admin/berita?pesan=update');
+    }
 }

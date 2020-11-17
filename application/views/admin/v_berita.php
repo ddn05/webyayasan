@@ -16,6 +16,12 @@
             if($_GET['pesan'] == "gagal"){
                 echo "<div class='Berhasil menambahkan berita.</div>";
             }
+            if($_GET['pesan'] == "hapusberita"){
+              echo "<div class='alert alert-success'>Berhasil menghapus berita.</div>";
+            }
+            if($_GET['pesan'] == "update"){
+              echo "<div class='alert alert-success'>Berhasil mengupdate berita.</div>";
+            }
         }
     ?>
 
@@ -43,14 +49,14 @@
         ?>
             <tr>
                 <td><?php echo $no++?></td>
-                <td><?php echo $ber->tgl?></td>
+                <td><?php echo date('d/m/Y',strtotime($ber->tgl)); ?></td>
                 <td><?php echo $ber->judul?></td>
                 <td>
                     <img src="<?php echo base_url('uploads/img/'.$ber->cover);?>" width="100px" height="100px">
                 </td>
                 <td>
-                  <?php echo anchor('admin/rincianberita/'.$ber->id,'<div class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="top" title="Detail Berita"><i class="fas fa-edit"></i></div>')?>
                   <?php echo anchor ('admin/rincianberita/' .$ber->id, '<div class="btn btn-success btn-sm"><i class="fas fa-search-plus"></i></div>') ?>
+                  <?php echo anchor('admin/editberita/'.$ber->id,'<div class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="top" title="Detail Berita"><i class="fas fa-edit"></i></div>')?>
                   <a href="javascript:void(0);" class="btn btn-danger btn-sm" onclick="hapusdata(<?php echo $ber->id;?>);"><i class="fas fa-trash"></i></a>
                 </td>
             </tr>
@@ -69,7 +75,7 @@
     function hapusdata(id){
        var r=confirm("Apakah anda yakin akan menghapus data ini ?")
         if (r==true)
-          window.location = url+"ebook/hapus_ebook/"+id;
+          window.location = url+"admin/hapusberita/"+id;
         else
           return false;
         } 

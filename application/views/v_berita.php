@@ -12,124 +12,27 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                    <img src="<?php echo base_url();?>assets/img/slide/slide-1.jpg" alt="" class="img-fluid">
-                    <div class="card-body">
-                    <h5><strong>ABSB Mengadakan perlombaan tingkat kabupaten</strong></h5>
-                    <hr>
-                    <p class="card-text">ABSB mengdakan perlombaan pencak silat tingkat kabupaten yang akan diadakan setiap bulan</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Baca Selengkapnya</button>
-                        </div>
-                        <small class="text-muted">12-10-2020</small>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                    <img src="<?php echo base_url();?>assets/img/slide/slide-1.jpg" alt="" class="img-fluid">
-                    <div class="card-body">
-                    <h5><strong>ABSB Mengadakan perlombaan tingkat kabupaten</strong></h5>
-                    <hr>
-                    <p class="card-text">ABSB mengdakan perlombaan pencak silat tingkat kabupaten yang akan diadakan setiap bulan</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Baca Selengkapnya</button>
-                        </div>
-                        <small class="text-muted">12-10-2020</small>
-                    </div>
-                    </div>
-                </div>
-            </div>
 
+        <?php foreach($berita as $ber) { ?>
             <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                    <img src="<?php echo base_url();?>assets/img/slide/slide-1.jpg" alt="" class="img-fluid">
+                    <img src="<?php echo base_url('uploads/img/'.$ber->cover);?>" alt="" class="card-img-top my-img-feature">
                     <div class="card-body">
-                    <h5><strong>ABSB Mengadakan perlombaan tingkat kabupaten</strong></h5>
+                    <h5><strong><?php echo $ber->judul?></strong></h5>
                     <hr>
-                    <p class="card-text">ABSB mengdakan perlombaan pencak silat tingkat kabupaten yang akan diadakan setiap bulan</p>
+                    <p class="card-text"><?php echo $ber->temp_redaksi?></p>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Baca Selengkapnya</button>
+                            <?php echo anchor ('user/baca/' .$ber->id, '<button type="button" class="btn btn-sm btn-outline-secondary">Baca Selengkapnya</button>') ?>
                         </div>
-                        <small class="text-muted">12-10-2020</small>
+                        <small class="text-muted"><?php echo date('d/m/Y',strtotime($ber->tgl)); ?></small>
                     </div>
                     </div>
                 </div>
             </div>
+        <?php } ?>
 
-            <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                    <img src="<?php echo base_url();?>assets/img/slide/slide-1.jpg" alt="" class="img-fluid">
-                    <div class="card-body">
-                    <h5><strong>ABSB Mengadakan perlombaan tingkat kabupaten</strong></h5>
-                    <hr>
-                    <p class="card-text">ABSB mengdakan perlombaan pencak silat tingkat kabupaten yang akan diadakan setiap bulan</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Baca Selengkapnya</button>
-                        </div>
-                        <small class="text-muted">12-10-2020</small>
-                    </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                    <img src="<?php echo base_url();?>assets/img/slide/slide-1.jpg" alt="" class="img-fluid">
-                    <div class="card-body">
-                    <h5><strong>ABSB Mengadakan perlombaan tingkat kabupaten</strong></h5>
-                    <hr>
-                    <p class="card-text">ABSB mengdakan perlombaan pencak silat tingkat kabupaten yang akan diadakan setiap bulan</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Baca Selengkapnya</button>
-                        </div>
-                        <small class="text-muted">12-10-2020</small>
-                    </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                    <img src="<?php echo base_url();?>assets/img/slide/slide-1.jpg" alt="" class="img-fluid">
-                    <div class="card-body">
-                    <h5><strong>ABSB Mengadakan perlombaan tingkat kabupaten</strong></h5>
-                    <hr>
-                    <p class="card-text">ABSB mengdakan perlombaan pencak silat tingkat kabupaten yang akan diadakan setiap bulan</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Baca Selengkapnya</button>
-                        </div>
-                        <small class="text-muted">12-10-2020</small>
-                    </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                    <img src="<?php echo base_url();?>assets/img/slide/slide-1.jpg" alt="" class="img-fluid">
-                    <div class="card-body">
-                    <h5><strong>ABSB Mengadakan perlombaan tingkat kabupaten</strong></h5>
-                    <hr>
-                    <p class="card-text">ABSB mengdakan perlombaan pencak silat tingkat kabupaten yang akan diadakan setiap bulan</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Baca Selengkapnya</button>
-                        </div>
-                        <small class="text-muted">12-10-2020</small>
-                    </div>
-                    </div>
-                </div>
-            </div>
+        </div>
     </div>
     <div class="container">
         <nav aria-label="Page navigation example">

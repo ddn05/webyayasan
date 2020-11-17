@@ -7,11 +7,10 @@
 
     <div class="col-md-7">
         <img src="<?php echo base_url();?>uploads/img/<?php echo $detail->cover?>" class="img-fluid" alt="Responsive image">
-        <span class="badge badge-info"><?php echo $detail->tgl?></span>
+        <span class="badge badge-info"><?php echo date('d/m/Y',strtotime($detail->tgl)); ?></span>
         <h3 class="mt-2"><strong><?php echo $detail->judul?></strong></h3>
         <hr>
         <p class="text-justify mt-3"><?php echo $detail->redaksi?></p>
     </div>
 
-        
 </div>
