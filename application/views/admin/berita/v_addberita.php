@@ -1,20 +1,6 @@
 <div class="container-fluid">
-    <h3 class="mb-3">TAMBAH BERITA</h3>
-
-    <div class="col-md-7 text-right">
-        <?php
-            if(isset($_GET['pesan'])){
-                if($_GET['pesan'] == "berhasil"){
-                    echo "<div class='alert alert-success text-center'>Berhasil Menambahkan Berita</div>";
-                }
-                if($_GET['pesan'] == "gagal"){
-                    echo "<div class='alert alert-danger text-center'>Gagal Menambahkan Berita</div>";
-                }
-            }
-        ?>
-        <a class="btn btn-success btn-sm mb-2" href="<?php echo base_url('admin/berita');?>">Kembali</a>
-    </div>
-
+<h3 class="mb-5"><strong>TAMBAH BERITA</strong></h3>
+    
         <?php echo form_open_multipart('admin/inputberita')?>
         
         <div class="col-md-7">
@@ -42,7 +28,7 @@
             
             <div class="form-group">
                 <label>Redaksi</label>
-                <textarea name="redaksi" id="mytextarea" class="form-control" require></textarea>
+                <textarea name="redaksi" id="redaksi" class="form-control" require></textarea>
                 <!-- <input type="text" class="form-control" id="redaksi" placeholder="" name="redaksi" value="" require> -->
                 <?php echo form_error('redaksi')?>
             </div>

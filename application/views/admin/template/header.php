@@ -30,7 +30,7 @@
 
     <script>
         tinymce.init({
-            selector: '#mytextarea'
+            selector: '#redaksi'
         });
     </script>
 
@@ -77,7 +77,7 @@
                 <span>Berita</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="<?php echo base_url();?>admin/generalpost">
                 <i class="fas fa-paste"></i>
                 <span>General Post</span></a>
             </li>

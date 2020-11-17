@@ -17,7 +17,7 @@ class Admin extends CI_Controller {
         $data['berita'] = $this->m_master->get_data('tb_berita')->result();
 
         $this->load->view('admin/template/header',$data);
-        $this->load->view('admin/v_berita',$data);
+        $this->load->view('admin/berita/v_berita',$data);
         $this->load->view('admin/template/footer');
     }
 
@@ -26,7 +26,7 @@ class Admin extends CI_Controller {
         $data['judul'] = 'Tambah Berita';
 
         $this->load->view('admin/template/header',$data);
-        $this->load->view('admin/v_addberita');
+        $this->load->view('admin/berita/v_addberita');
         $this->load->view('admin/template/footer');
     }
 
@@ -83,7 +83,7 @@ class Admin extends CI_Controller {
         $data['detail'] = $this->db->get_where('tb_berita', array('id' => $id))->row();
 
         $this->load->view('admin/template/header',$data);
-        $this->load->view('admin/v_beritadetail',$data);
+        $this->load->view('admin/berita/v_beritadetail',$data);
         $this->load->view('admin/template/footer');
     }
 
@@ -104,7 +104,7 @@ class Admin extends CI_Controller {
         $data['update'] = $this->m_master->edit_data($where,'tb_berita')->result();
 
         $this->load->view('admin/template/header',$data);
-        $this->load->view('admin/v_editberita',$data);
+        $this->load->view('admin/berita/v_editberita',$data);
         $this->load->view('admin/template/footer');
     }
 
@@ -147,5 +147,105 @@ class Admin extends CI_Controller {
 
         $this->m_master->update_data($where,$data,'tb_berita');
         redirect('admin/berita?pesan=update');
+    }
+
+    public function generalpost(){
+        $data['judul'] = 'General Post';
+        $data['jumbotron'] = $this->m_master->get_data('tb_jumbotron')->result();
+
+        $this->load->view('admin/template/header',$data);
+        $this->load->view('admin/general-post/v_general-post',$data);
+        $this->load->view('admin/template/footer');
+    }
+
+    public function addjumbotron(){
+        $data['judul'] = 'Tambah Jumbotron';
+
+        $this->load->view('admin/template/header',$data);
+        $this->load->view('admin/general-post/v_addjumbotron');
+        $this->load->view('admin/template/footer');
+    }
+
+    public function inputjumbotron(){
+        $onfig = array();
+        $config['upload_path']      = './uploads/img-jumbotron';
+        $config['allowed_types']    = 'jpg|jpeg|png|gif';
+
+        $this->load->library('upload',$config,'jumbotronupload');
+        $this->jumbotronupload->initialize($config);
+        $jumbotronupload    = $this->jumbotronupload->do_upload('gambar');
+        $datgam             = $this->jumbotronupload->data();
+
+        $judul          = $this->input->post('judul');
+        $deskripsi      = $this->input->post('deskripsi');
+        $gambar         = $datgam['file_name'];
+
+        $data = array(
+            'judul'     => $judul,
+            'deskripsi' => $deskripsi,
+            'gambar'    => $gambar
+        );
+
+        $this->m_master->insert_data($data,'tb_jumbotron');
+        redirect('admin/generalpost?pesan=berhasil');
+    }
+
+    public function hapusjumbotron($id){
+        $where = array(
+            'id' => $id
+        );
+
+        $this->m_master->delete_data($where,'tb_jumbotron');
+        redirect('admin/generalpost?pesan=hapusjumbotron');
+    }
+
+    public function editjumbotron($id){
+        $data['judul'] = 'Edit Jumbotron';
+
+        $where = array(
+            'id' => $id
+        );
+        $data['edit'] = $this->m_master->edit_data($where,'tb_jumbotron')->result();
+
+        $this->load->view('admin/template/header',$data);
+        $this->load->view('admin/general-post/v_editjumbotron',$data);
+        $this->load->view('admin/template/footer');
+    }
+
+    public function updatejumbotron(){
+        $onfig = array();
+        $config['upload_path']      = './uploads/img-jumbotron';
+        $config['allowed_types']    = 'jpg|jpeg|png|gif';
+
+        $this->load->library('upload',$config,'jumbotronupload');
+        $this->jumbotronupload->initialize($config);
+        $jumbotronupload    = $this->jumbotronupload->do_upload('gambar');
+        $datgam             = $this->jumbotronupload->data();
+
+        $id             = $this->input->post('id');
+        $judul          = $this->input->post('judul');
+        $deskripsi      = $this->input->post('deskripsi');
+        $gambar         = $datgam['file_name'];
+
+        if($gambar == ''){
+            $data = array(
+                'judul'     => $judul,
+                'deskripsi' => $deskripsi
+            );
+        }
+        else{
+            $data = array(
+                'judul'     => $judul,
+                'deskripsi' => $deskripsi,
+                'gambar'    => $gambar
+            );
+        }
+
+        $where = array(
+            'id'        => $id
+        );
+
+        $this->m_master->update_data($where,$data,'tb_jumbotron');
+        redirect('admin/generalpost?pesan=update');
     }
 }
