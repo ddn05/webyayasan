@@ -50,7 +50,6 @@ class Admin extends CI_Controller {
             'tgl'           => $tgl,
             'judul'         => $judul,
             'redaksi'       => $redaksi,
-            'temp_redaksi'  => $temp_redaksi,
             'cover'         => $cover
         );
 
@@ -130,7 +129,6 @@ class Admin extends CI_Controller {
                 'tgl'           => $tgl,
                 'judul'         => $judul,
                 'redaksi'       => $redaksi,
-                'temp_redaksi'  => $temp_redaksi
             );
         }
         else{
@@ -138,7 +136,6 @@ class Admin extends CI_Controller {
                 'tgl'           => $tgl,
                 'judul'         => $judul,
                 'redaksi'       => $redaksi,
-                'temp_redaksi'  => $temp_redaksi,
                 'cover'         => $cover
             );
         }

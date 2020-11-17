@@ -25,6 +25,15 @@
 
     <!-- Custom styles for this page -->
     <link href="<?php echo base_url();?>assets/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    
+    <script src="<?php echo base_url();?>assets/tinymce/tinymce.min.js"></script>
+
+    <script>
+        tinymce.init({
+            selector: '#mytextarea'
+        });
+    </script>
+
     </head>
 
     <body id="page-top">

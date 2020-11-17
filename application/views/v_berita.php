@@ -20,7 +20,6 @@
                     <div class="card-body">
                     <h5><strong><?php echo $ber->judul?></strong></h5>
                     <hr>
-                    <p class="card-text"><?php echo $ber->temp_redaksi?></p>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                             <?php echo anchor ('user/baca/' .$ber->id, '<button type="button" class="btn btn-sm btn-outline-secondary">Baca Selengkapnya</button>') ?>

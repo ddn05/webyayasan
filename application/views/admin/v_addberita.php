@@ -42,7 +42,7 @@
             
             <div class="form-group">
                 <label>Redaksi</label>
-                <textarea name="redaksi" id="redaksi" class="form-control" require></textarea>
+                <textarea name="redaksi" id="mytextarea" class="form-control" require></textarea>
                 <!-- <input type="text" class="form-control" id="redaksi" placeholder="" name="redaksi" value="" require> -->
                 <?php echo form_error('redaksi')?>
             </div>
