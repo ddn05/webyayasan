@@ -22,6 +22,14 @@ class M_master extends CI_Model{
 	function delete_data($where,$table){
 		$this->db->where($where);
 		$this->db->delete($table);
-	}		
+	}	
+	
+	public function cari_data($keyword){
+        $this->db->select('*');
+        $this->db->from('tb_berita');
+        $this->db->like('judul',$keyword);
+
+        return $this->db->get()->result();
+    }
 }
 ?>

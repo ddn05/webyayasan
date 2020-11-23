@@ -5,10 +5,11 @@
 
         <ol>
             <li><a href="<?php echo base_url()?>user">Home</a></li>
-            <li>Berita</li>
+            <li><a href="<?php echo base_url()?>user/berita">Berita</a></li>
+            <li>Penelurusan</li>
         </ol>
             <div class="container p-0 m-0 text-right navbar mt-4">
-                <h2>Berita</h2>
+                <h2>Hasil Penelusuran</h2>
                 <?php echo form_open('user/search')?>
                     <form class="form-inline">
                     <div class="input-group">
@@ -20,6 +21,9 @@
                     </form>
                 <?php echo form_close()?>
             </div>
+            <p>Telusuri : <?php echo $kunci?></p>
+
+            
         </div>
     </section><!-- End Breadcrumbs -->
 
@@ -30,7 +34,7 @@
 
         <div class="row">
 
-        <?php foreach($berita as $ber) { ?>
+        <?php foreach($cari as $ber) { ?>
             <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
                     <!-- <img src="<?php echo base_url('uploads/img/'.$ber->cover);?>" alt="" class="card-img-top my-img-feature"> -->
@@ -51,25 +55,5 @@
 
         </div>
     </div>
-    <div class="container">
-        <nav aria-label="Page navigation example">
-                <ul class="pagination">
-                    <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                    </li>
-                </ul>
-            </nav>
-    </div>
-
     </section>
 </main>
