@@ -255,4 +255,36 @@ class Admin extends CI_Controller {
         $this->m_master->update_data($where,$data,'tb_jumbotron');
         redirect('admin/generalpost?pesan=update');
     }
+
+
+    public function gantipassword(){
+        $data['judul']  = 'Ganti Password';
+
+        $this->load->view('admin/template/header',$data);
+        $this->load->view('admin/v_gantipassword');
+        $this->load->view('admin/template/footer');
+    }
+
+    public function actpassword(){
+        $pass_baru      = $this->input->post('pass_baru');
+        $ulangi_pass    = $this->input->post('ulangi_pass');
+        
+        $this->form_validation->set_rules('pass_baru','Password Baru', 'required|matches[ulang_pass]');
+        $this->form_validation->set_rules('ulang_pass','Ulangi Password Baru','required');
+
+        if($this->form_validation->run() != false){
+            $data = array(
+                'password' =>md5($pass_baru)
+            );
+            $w = array(
+                'id' => $this->session->userdata('id')
+            );
+
+            $this->m_master->update_data($w,$data,'tb_admin');
+            redirect('admin/gantipassword?pesan=berhasil');
+        }
+        else{
+            redirect('admin/gantipassword?pesan=gagal');
+        }
+    }
 }
