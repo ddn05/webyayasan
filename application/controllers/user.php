@@ -41,4 +41,12 @@ class User extends CI_Controller {
                 $this->load->view('v_cari',$data);
                 $this->load->view('template/footer');
         }
+
+        public function tentang(){
+                $data['judul'] = 'Tentang';
+
+                $this->load->view('template/header',$data);
+                $this->load->view('v_tentang',$data);
+                $this->load->view('template/footer');
+        }
 }

@@ -1,8 +1,8 @@
 <main id="main">
 
 <section id="featured" class="featured">
-<!-- ======= Breadcrumbs ======= -->
-<section id="breadcrumbs" class="breadcrumbs">
+    <!-- ======= Breadcrumbs ======= -->
+    <section   section id="breadcrumbs" class="breadcrumbs">
         <div class="container">
 
             <ol>

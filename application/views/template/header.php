@@ -119,7 +119,7 @@
             </ul>
           </li> -->
           <li><a href="<?php echo base_url();?>user/berita">Berita</a></li>
-          <li><a href="services.html">Tentang</a></li>
+          <li><a href="<?php echo base_url();?>user/tentang">Tentang</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
