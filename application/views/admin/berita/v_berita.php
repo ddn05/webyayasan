@@ -27,7 +27,7 @@
 
   <!-- Button trigger modal -->
     <a href="<?php echo base_url();?>admin/tambahberita" class="btn btn-primary btn-sm"><i class="fas fa-plus mr-2"></i>Tambah Berita</a>
-    <a href="<?php echo base_url();?>lap_ebook" class="btn btn-success btn-sm ml-2" target="_blank"><i class="fas fa-print mr-2"></i>Laporan Berita</a>
+    <!-- <a href="<?php echo base_url();?>lap_ebook" class="btn btn-success btn-sm ml-2" target="_blank"><i class="fas fa-print mr-2"></i>Laporan Berita</a> -->
     </div>
 
   <div class="card-body">

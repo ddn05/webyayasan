@@ -92,7 +92,7 @@
 
         <div class="row">
           <div class="col-lg-6">
-            <img src="assets/img/info.svg" class="img-fluid" alt="">
+            <img src="assets/img/history.svg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content">
             <h3>Sejarah Singkat Yayasan Auliya Mursyidy</h3><br>
@@ -136,7 +136,7 @@
           </div>
 
           <div class="col-lg-6">
-            <img src="assets/img/visi.svg" class="img-fluid" alt="">
+            <img src="assets/img/vision.svg" class="img-fluid" alt="">
           </div>
         </div>
       </div>

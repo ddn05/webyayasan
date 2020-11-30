@@ -36,58 +36,7 @@
       <div class="row">
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
           <div class="member">
-            <img src="<?php echo base_url()?>assets/img/team/team-2.jpg" alt="">
-            <h4>Dewi Siti Sodja, Amd.Keb.</h4>
-            <span>Ketua Yayasan</span>
-            <p>
-              Hidup adalah perjuangan
-            </p>
-            <div class="social">
-              <a href=""><i class="icofont-twitter"></i></a>
-              <a href=""><i class="icofont-facebook"></i></a>
-              <a href=""><i class="icofont-instagram"></i></a>
-              <!-- <a href=""><i class="icofont-linkedin"></i></a> -->
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-          <div class="member">
-            <img src="<?php echo base_url()?>assets/img/team/team-2.jpg" alt="">
-            <h4>Dewi Siti Sodja, Amd.Keb.</h4>
-            <span>Ketua Yayasan</span>
-            <p>
-              Hidup adalah perjuangan
-            </p>
-            <div class="social">
-              <a href=""><i class="icofont-twitter"></i></a>
-              <a href=""><i class="icofont-facebook"></i></a>
-              <a href=""><i class="icofont-instagram"></i></a>
-              <!-- <a href=""><i class="icofont-linkedin"></i></a> -->
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-          <div class="member">
-            <img src="<?php echo base_url()?>assets/img/team/team-2.jpg" alt="">
-            <h4>Dewi Siti Sodja, Amd.Keb.</h4>
-            <span>Ketua Yayasan</span>
-            <p>
-              Hidup adalah perjuangan
-            </p>
-            <div class="social">
-              <a href=""><i class="icofont-twitter"></i></a>
-              <a href=""><i class="icofont-facebook"></i></a>
-              <a href=""><i class="icofont-instagram"></i></a>
-              <!-- <a href=""><i class="icofont-linkedin"></i></a> -->
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-          <div class="member">
-            <img src="<?php echo base_url()?>assets/img/team/team-2.jpg" alt="">
+            <img src="<?php echo base_url()?>assets/img/team/umi.jpg" alt="">
             <h4>Dewi Siti Sodja, Amd.Keb.</h4>
             <span>Ketua Yayasan</span>
             <p>

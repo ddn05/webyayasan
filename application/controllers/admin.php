@@ -287,4 +287,37 @@ class Admin extends CI_Controller {
             redirect('admin/gantipassword?pesan=gagal');
         }
     }
+
+    public function dataadmin(){
+        $data['judul']  = 'Admin';
+        $data['admin']  = $this->m_master->get_data('tb_admin')->result();
+
+        $this->load->view('admin/template/header',$data);
+        $this->load->view('admin/petugas/v_dataadmin',$data);
+        $this->load->view('admin/template/footer');
+    }
+
+    public function inputadmin(){
+        $nama       = $this->input->post('nama');
+        $username   = $this->input->post('username');
+        $password   = $this->input->post('password');
+
+        $data=array(
+            'nama' => $nama,
+            'username' => $username,
+            'password' => md5($password)
+        );
+
+        $this->m_master->insert_data($data,'tb_admin');
+        redirect('admin/dataadmin?pesan=sukses');
+    }
+
+    public function hapusadmin($id){
+        $where = array(
+            'id' => $id
+        );
+
+        $this->m_master->delete_data($where,'tb_admin');
+        redirect('admin/dataadmin?pesan=hapus');
+    }
 }

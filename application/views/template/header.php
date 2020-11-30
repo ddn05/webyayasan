@@ -66,7 +66,7 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="<?php echo base_url();?>user">Beranda</a></li>
+          <li class=""><a href="<?php echo base_url();?>user">Beranda</a></li>
 
           <li class="drop-down"><a href="#">Program</a>
             <ul>

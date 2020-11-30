@@ -46,7 +46,7 @@
         <ul class="navbar-nav warna-bg sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo base_url()?>admin">
                 <div class="sidebar-brand-icon logo">
                 <img class="img-fluid" style="width:45px; height:auto;" src="<?php echo base_url();?>assets/img/yam.png" alt="">
                 </div>
@@ -58,7 +58,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="<?php echo base_url()?>admin">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
             </li>
@@ -88,8 +88,15 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Addons
+                Master
             </div>
+
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url();?>admin/dataadmin">
+                <i class="fas fa-paste"></i>
+                <span>Data Admin</span></a>
+            </li>
+
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
